@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <section>
+        <article>
+            <h2>Liste des pizza</h2>
+
+            <ul>
+            {% for pizza in pizzas %}
+                <li>{{ pizza}}</li>
+            {% endfor %}
+            </ul>
+        </article>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'adminbase.html.twig' %}
+{% block content %}
+    <section>
+        <article>
+            <div class="thumbnail alert-info">
+                {{ form_start(form) }}
+
+                <div class="form-group">
+                    {{ form_label(form.name, 'Nom : ') }}
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.price, 'Prix : ') }}
+                    {{ form_widget(form.price, {'attr': {'class': 'form-control'}}) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.description, 'Description : ') }}
+                    {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+                </div>
+
+                {# <div class="form-group">
+                    {{ form_label(form.ingredients, 'Ingredients : ') }}
+                    {{ form_widget(form.ingredients, {'attr': {'class': 'form-control'}}) }}
+                </div> #}
+
+                <div class="form-group">
+                    {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+                </div>
+                            
+            {{ form_end(form) }}
+            
+            </div>
+
+        </article>
+    </section>
+{% endblock %}
